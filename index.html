@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme='light'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="main.css" >
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="contactMe">
+            <a href = "mailto: goncalomoliveira1@gmail.com"> <i class="material-icons chat">chat_bubble</i>Contact me</a>
+        </div>
+        <div class="toggle-container">
+            <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label></div>
+        <div class="navIcons">
+            <a href="https://github.com/Holi-Pog" target="_blank"><img src="./img/github_gray.png" alt="github" class="github" onmouseover="this.src='./img/github_black.png';" onmouseout="this.src='./img/github_gray.png';"></a>
+            <a href="https://codepen.io/holi-pog" target="_blank"><img src="./img/codepen_gray.svg" alt="codepen" class="codepen" onmouseover="this.src='./img/codepen_black.svg';" onmouseout="this.src='./img/codepen_gray.svg';" ></a>
+            <a href="https://www.linkedin.com/in/holi-oli-87422a152/" target="_blank"><img src="./img/linkedin_gray.jpg" alt="linkedin" class="linkedin"onmouseover="this.src='./img/linkedin_blue.jpg';" onmouseout="this.src='./img/linkedin_gray.jpg';"></a>
+        </div>
+    </div>
+    <div class="landing">
+        <div class="landingWrapper">
+            <div class="landingL">
+                <h1>Gonçalo Oliveira.</h1>
+                <p><span class="big">Hi!</span>My name is Gonçalo Oliveira. <br> I am a student at Istec.<br> I like UI/UX &amp; <span class="blue">WebDesign</span>.</p>
+                <ul>
+                    <li><p>UI/UX</p></li>
+                    <li><p>WebDesign</p></li>
+                    <li><p>Mobile Games</p></li>
+                    <li><p>Front-end</p></li>
+                </ul>
+            </div>
+            <div class="landingR"></div>
+            <img src="./img/Imagem.png" alt="face" style="margin-top: 49px;" >
+        </div>
+        <i class="material-icons down">
+        expand_more
+        </i>
+    </div>
+    <div class="skills">
+        <h2>Skills</h2>
+        <p>Over 2 years of experience using<br> these programs. </p>
+        <div class="programs">
+            <img src="./img/logo-javascript.png" alt="javascript">
+            <img src="./img/illustrator.png" alt="illustrator">
+            <img src="./img/Photoshop.png" alt="photoshop">
+            <img src="./img/adobe-xd.svg" alt="adobexd">
+            <img src="./img/aftereffect.png" alt="aftereffect">
+            <img src="./img/html.png" alt="html">
+            <img src="./img/unity.svg" alt="unity">
+        </div>
+    </div>
+    <div class="work clearfix">
+        <div class="workText">
+            <h3>Snake</h3>
+            <a><h5>View Project</h5></a>
+            <div class="underline"></div>
+        </div>
+        <ul>
+            <li><a href="./Snake/dist/index.html"><img src="./img/Arrow1.png" alt=""style="width: 40px;"></a></li>
+        </ul>
+        <img src="./img/snake__thumbnail.svg" alt="Propject image" class="workImg"style="width:800px;">
+    </div>
+    <div class="work2 clearfix">
+        <div class="workText">
+            <h3>Tetris</h3>
+                <h5>View Project</h5>
+            <div class="underline"></div>
+        </div>
+        <ul>
+            <li><a href="./Tetris/index.html"><img src="./img/Arrow.png" alt=""style="width: 40px;"></a></li>
+        </ul>
+        <img src="./img/tetris.jpg" alt="Propject image" class="workImg"style="width: 800px;" >
+    </div>
+    <div class="footer">
+        <a href="./Frame.pdf" target="_blank">More on Curriculum </a>
+
+    </div>
+    <div class="lineSmall"></div>
+    <script>
+                var checkbox = document.querySelector('input[name=theme]');
+
+checkbox.addEventListener('change', function() {
+    if(this.checked) {
+        trans()
+        document.documentElement.setAttribute('data-theme', 'dark')
+    } else {
+        trans()
+        document.documentElement.setAttribute('data-theme', 'light')
+    }
+})
+
+let trans = () => {
+    document.documentElement.classList.add('transition');
+    window.setTimeout(() => {
+        document.documentElement.classList.remove('transition')
+    }, 1000)
+}
+    </script>
+</body>
+</html>
